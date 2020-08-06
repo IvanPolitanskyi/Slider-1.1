@@ -4,6 +4,29 @@ var slideInterval = setInterval(nextSlide, 2000);
 
 function nextSlide() {
     slides[currentSlide].className = 'slide';
-    currentSlide = (currentSlide+1)%slides.length;
+    currentSlide = (currentSlide + 1) % slides.length;
     slides[currentSlide].className = 'slide showing';
 }
+
+var playing = true;
+var pauseButton = document.getElementById('pause');
+
+function pauseSlideShow() {
+    pauseButton.innerHTML = 'Play';
+    playing = false;
+    clearInterval(slideInterval);
+}
+
+function playingSlideShow() {
+    pauseButton.innerHTML = 'Pause';
+    playing = true;
+    slideInterval = setInterval(nextSlide, 2000);
+}
+
+pauseButton.onclick = function () {
+    if (playing) {
+        pauseSlideShow();
+    } else {
+        playingSlideShow();
+    }
+};

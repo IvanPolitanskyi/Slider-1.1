@@ -42,3 +42,31 @@
     opacity: 1;
     z-index: 2;
 }
+
+.controls {
+    width: 100px;
+    height: 30px;
+    font-size: 17px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-top: 20px;
+    border: 1px solid #0a3c59;
+    background: #333;
+    color: whitesmoke;
+    border-radius: 15%;
+}
+
+.controls:hover {
+    border: 1px solid #0a3c59;
+    text-shadow: #1e4158 0 1px 0;
+    background: #426a85;
+    color: #240424;
+}
+
+.controls:active {
+    text-shadow: #1e4158 0 1px 0;
+    border: 1px solid #0a3c59;
+    background: #6ab7eb;
+    color: #fff;
+}
